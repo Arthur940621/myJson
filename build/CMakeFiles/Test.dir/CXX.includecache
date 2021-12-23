@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/Json.h
+memory
+-
+string
+-
+unordered_map
+-
+vector
+-
+iostream
+-
+
+/home/arthur/C++/myJson/test/test.cpp
+string
+-
+gtest/gtest.h
+-
+Json.h
+/home/arthur/C++/myJson/test/Json.h
+

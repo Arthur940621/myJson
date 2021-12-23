@@ -1,0 +1,1 @@
+/usr/bin/c++  -g  -rdynamic CMakeFiles/Jsonchecker.dir/test/jsonchecker.cpp.o  -o Jsonchecker  -Wl,-rpath,/home/arthur/C++/myJson/build/bin bin/libmyJson.so 
