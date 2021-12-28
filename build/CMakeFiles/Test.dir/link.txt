@@ -1,1 +1,1 @@
-/usr/bin/c++  -g  -rdynamic CMakeFiles/Test.dir/test/test.cpp.o  -o Test  -Wl,-rpath,/home/arthur/C++/myJson/build/bin bin/libmyJson.so /usr/local/lib/libgtest.a -Wl,-Bstatic -lgtest_main -Wl,-Bdynamic -pthread 
+/usr/bin/c++  -g  -rdynamic CMakeFiles/Test.dir/test/test.cpp.o  -o Test  -Wl,-rpath,/home/arthur/C++/myJson/build/bin bin/libmyJson.so /usr/local/lib/libgtest.a /usr/local/lib/libgtest_main.a -pthread 

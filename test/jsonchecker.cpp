@@ -1,9 +1,5 @@
 #include "Json.h"
 #include <dirent.h>
-#include <sys/stat.h>
-#include <sys/types.h>
-#include <unistd.h>
-#include <cstring>
 #include <fstream>
 #include <iostream>
 #include <string>
@@ -48,11 +44,6 @@ void passJson(const string& filename) {
 }
 
 int main() {
-    struct stat stat;
-    if (lstat(".", &stat) < 0) {
-        cerr << "lstat error" << endl;
-        return 0;
-    }
     DIR* dp = opendir("../test/Data");
     if (!dp) {
         perror("can't open Data");
@@ -60,11 +51,11 @@ int main() {
     }
     dirent* dirp;
     while ((dirp = readdir(dp)) != nullptr) {
-        string filename = "../test/Data/";
-        switch (dirp->d_name[0]) {
-        case 'f': failJson(filename + dirp->d_name); break;
-        case 'p': passJson(filename + dirp->d_name); break;
-        default: break;
+            string filename = "../test/Data/";
+            switch (dirp->d_name[0]) {
+                case 'f': failJson(filename + dirp->d_name); break;
+                case 'p': passJson(filename + dirp->d_name); break;
+                default: break;
         }
     }
     closedir(dp);

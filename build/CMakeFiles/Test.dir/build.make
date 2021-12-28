@@ -81,6 +81,7 @@ Test: CMakeFiles/Test.dir/test/test.cpp.o
 Test: CMakeFiles/Test.dir/build.make
 Test: bin/libmyJson.so
 Test: /usr/local/lib/libgtest.a
+Test: /usr/local/lib/libgtest_main.a
 Test: CMakeFiles/Test.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/arthur/C++/myJson/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable Test"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Test.dir/link.txt --verbose=$(VERBOSE)

@@ -15,7 +15,7 @@ add_library(myJson SHARED ${SRC})
 
 enable_testing()
 add_executable(Test ./test/test.cpp)
-target_link_libraries(Test myJson /usr/local/lib/libgtest.a /usr/local/lib/ libgtest_main.a -pthread)
+target_link_libraries(Test myJson /usr/local/lib/libgtest.a /usr/local/lib/libgtest_main.a -pthread)
 
 add_executable(Jsonchecker ./test/jsonchecker.cpp)
 target_link_libraries(Jsonchecker myJson)

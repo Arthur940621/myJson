@@ -23,14 +23,6 @@ Json.h
 /home/arthur/C++/myJson/test/Json.h
 dirent.h
 -
-sys/stat.h
--
-sys/types.h
--
-unistd.h
--
-cstring
--
 fstream
 -
 iostream
