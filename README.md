@@ -6,7 +6,7 @@
 
 例如，一个动态网页想从服务器获得数据时，服务器从数据库查找数据，然后把数据转换成 `Json` 文本格式：
 
-```json
+```
 {
     "title": "Design Patterns",
     "subtitle": "Elements of Reusable Object-Oriented Software",
@@ -681,7 +681,7 @@ JsonParser& operator=(const JsonParser&) = delete;
 
 当类的类成员定义了自己的拷贝（赋值）构造函数且未定义移动构造（赋值）函数，不会使用移动版本。
 
-## 解析
+### 解析
 
 ```cpp
 void parseWhitespace();
@@ -699,7 +699,7 @@ Json parseObject();
 
 下面是 Json 的语法子集：
 
-```json
+```
 Json-text = ws value ws
 ws = *(%x20 / %x09 / %x0A / %x0D)
 ```
@@ -782,7 +782,7 @@ Json JsonParser::parseValue() {
 
 **`parseLiteral` 解析 `true`、`false`、`null`**
 
-```json
+```
 value = null / false / true
 null  = "null"
 false = "false"
@@ -816,7 +816,7 @@ Json JsonParser::parseLiteral(const std::string& literal) {
 
 **`parseNumber` 解析数字**
 
-```json
+```
 number = [ "-" ] int [ frac ] [ exp ]
 int = "0" / digit1-9 *digit
 frac = "." 1*digit
@@ -938,7 +938,7 @@ Json JsonParser::parseNumber() {
 
 `Json` 的字符串语法以双引号把字符括起来，如 `"Hello"`。但字符串采用了双引号作分隔，那么怎样可以在字符串中插入一个双引号？ 把 `a"b` 写成 `"a"b"` 肯定不行，都不知道那里是字符串的结束了。因此，我们需要引入转义字符，`C++` 和 `Json` 都使用 `\`（反斜线）作为转义字符，那么 " 在字符串中就表示为 `\"`，`a"b` 的 `Json` 字符串则写成 `"a\"b"`。如以下的字符串语法所示，`Json` 共支持 `9` 种转义序列：
 
-```json
+```
 string = quotation-mark *char quotation-mark
 char = unescaped /
    escape (
@@ -1007,7 +1007,7 @@ while (true) {
 
 上面已解决不合法转义，余下部分是要从语法中知道哪些是不合法字符：
 
-```json
+```
 unescaped = %x20-21 / %x23-5B / %x5D-10FFFF
 ```
 
@@ -1196,7 +1196,7 @@ return Json(parseRawString());
 
 **`parseArray` 解析数组**
 
-```json
+```jon
 array = %x5B ws [ value *( ws %x2C ws value ) ] ws %x5D
 ```
 
@@ -1235,7 +1235,7 @@ Json JsonParser::parseArray() {
 
 `Json` 对象和 `Json` 数组非常相似，区别包括 `Json` 对象以花括号 `{}` 包裹表示，另外 `Json` 对象由对象成员组成，而 `Json` 数组由 `Json` 值组成。所谓对象成员，就是键值对，键必须为 `Json` 字符串，然后值是任何 `Json` 值，中间以冒号 `:` 分隔。完整语法如下：
 
-```json
+```
 member = string ws %x3A ws value
 object = %x7B ws [ member *( ws %x2C ws member ) ] ws %x7D
 ```
