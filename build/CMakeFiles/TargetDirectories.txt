@@ -1,6 +1,0 @@
-/home/arthur/C++/myJson/build/CMakeFiles/rebuild_cache.dir
-/home/arthur/C++/myJson/build/CMakeFiles/Jsonchecker.dir
-/home/arthur/C++/myJson/build/CMakeFiles/edit_cache.dir
-/home/arthur/C++/myJson/build/CMakeFiles/test.dir
-/home/arthur/C++/myJson/build/CMakeFiles/Test.dir
-/home/arthur/C++/myJson/build/CMakeFiles/myJson.dir

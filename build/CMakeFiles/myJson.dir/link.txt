@@ -1,1 +1,0 @@
-/usr/bin/c++ -fPIC -g  -shared -Wl,-soname,libmyJson.so -o bin/libmyJson.so CMakeFiles/myJson.dir/src/Json.cpp.o CMakeFiles/myJson.dir/src/JsonParser.cpp.o CMakeFiles/myJson.dir/src/JsonValue.cpp.o 
